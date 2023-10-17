@@ -15,7 +15,6 @@ phases:
   build:
     on-failure: ABORT
     commands:
-      - cp .env.prod .env 
       - echo 'build'
       - docker build -t $IMAGE .
       - docker tag $IMAGE:$IMAGE_TAG $REPOSITORY/$IMAGE:$IMAGE_TAG
